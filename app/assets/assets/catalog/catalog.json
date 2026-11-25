@@ -1,0 +1,772 @@
+{
+  "version": "2026.11-demo",
+  "baseCurrency": "TND",
+  "disclaimer": "Données de démonstration : prix, références et caractéristiques indicatifs, à remplacer par le tarif officiel BIOPOLE.",
+  "indications": [
+    { "id": "epilation", "label": "Épilation" },
+    { "id": "vasculaire", "label": "Vasculaire" },
+    { "id": "rajeunissement", "label": "Rajeunissement" },
+    { "id": "phototherapie", "label": "Photothérapie" },
+    { "id": "refroidissement", "label": "Refroidissement" }
+  ],
+  "brands": [
+    {
+      "id": "quanta",
+      "name": "Quanta System",
+      "country": "Italie",
+      "tagline": "Lasers médicaux & esthétiques haute performance",
+      "accentColor": "#C62839"
+    },
+    {
+      "id": "zimmer",
+      "name": "Zimmer",
+      "country": "Allemagne",
+      "tagline": "Refroidissement cutané par air froid",
+      "accentColor": "#0A6FB8"
+    },
+    {
+      "id": "dermalux",
+      "name": "Dermalux",
+      "country": "Royaume-Uni",
+      "tagline": "Photothérapie LED de grade médical",
+      "accentColor": "#7A3FA8"
+    },
+    {
+      "id": "intermedic",
+      "name": "Intermedic",
+      "country": "Espagne",
+      "tagline": "Plateformes laser CO₂ & diode",
+      "accentColor": "#00968F"
+    },
+    {
+      "id": "asirox",
+      "name": "Asirox",
+      "country": "Espagne",
+      "tagline": "Technologies esthétiques professionnelles",
+      "accentColor": "#C9820A"
+    }
+  ],
+  "equipments": [
+    {
+      "id": "quanta-duetto-mt-evo",
+      "brandId": "quanta",
+      "name": "Duetto MT Evo",
+      "reference": "QS-DMT-EVO",
+      "family": "Laser Alexandrite 755 nm + Nd:YAG 1064 nm",
+      "illustration": "laserTower",
+      "shortDescription": "Plateforme bi-longueur d'onde de référence pour l'épilation tous phototypes et le traitement des lésions vasculaires et pigmentaires.",
+      "description": "Le Duetto MT Evo associe un laser Alexandrite 755 nm et un laser Nd:YAG 1064 nm dans une seule console. L'émission séquentielle ou mixte permet d'adapter le traitement au phototype (I à VI) et à la profondeur de la cible.",
+      "indications": ["epilation", "vasculaire", "rajeunissement"],
+      "technologies": ["Alexandrite 755 nm", "Nd:YAG 1064 nm", "Mixed Technology", "Écran tactile"],
+      "specs": [
+        { "label": "Longueurs d'onde", "value": "755 nm / 1064 nm" },
+        { "label": "Diamètre de spot", "value": "6 à 18 mm" },
+        { "label": "Fréquence", "value": "jusqu'à 10 Hz" },
+        { "label": "Interface", "value": "Écran tactile 10,4\"" },
+        { "label": "Alimentation", "value": "230 V monophasé" },
+        { "label": "Poids", "value": "≈ 120 kg" }
+      ],
+      "standardItems": [
+        "Console Duetto MT Evo",
+        "Pièce à main 12 mm",
+        "Pédale de commande",
+        "2 lunettes de protection opérateur",
+        "Manuel d'utilisation & guide des protocoles"
+      ],
+      "basePrice": 268000,
+      "maxDiscountPct": 12,
+      "warrantyMonths": 12,
+      "leadTimeWeeks": 6,
+      "roiDefaults": { "sessionPrice": 180, "patientsPerDay": 6, "consumablePerSession": 8 },
+      "optionGroups": [
+        {
+          "id": "duetto-cfg",
+          "category": "configuration",
+          "title": "Configuration logicielle",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "duetto-cfg-hr", "reference": "QS-DMT-CFG-HR", "name": "Hair Removal", "description": "Préréglages épilation pour tous phototypes.", "price": 0, "default": true },
+            { "id": "duetto-cfg-vp", "reference": "QS-DMT-CFG-VP", "name": "Vascular & Pigment", "description": "Débloque les protocoles vasculaires (Nd:YAG) et pigmentaires (Alexandrite).", "price": 16500 },
+            { "id": "duetto-cfg-full", "reference": "QS-DMT-CFG-FULL", "name": "Full Clinic", "description": "Tous les protocoles, mode HPM et protocoles avancés inclus.", "price": 29500 }
+          ]
+        },
+        {
+          "id": "duetto-lic",
+          "category": "configuration",
+          "title": "Licences complémentaires",
+          "selection": "multiple",
+          "options": [
+            { "id": "duetto-lic-hpm", "reference": "QS-DMT-LIC-HPM", "name": "Licence High Power Mode", "description": "Fluence accrue sur les grands spots pour des séances plus rapides.", "price": 9800 },
+            { "id": "duetto-lic-proto", "reference": "QS-DMT-LIC-ADV", "name": "Protocoles avancés", "description": "Bibliothèque mélasma, lentigos, rosacée et couperose.", "price": 6200 }
+          ]
+        },
+        {
+          "id": "duetto-hp",
+          "category": "handpiece",
+          "title": "Pièces à main",
+          "selection": "multiple",
+          "options": [
+            { "id": "duetto-hp-zoom", "reference": "QS-HP-Z618", "name": "Pièce à main zoom 6–18 mm", "description": "Spot variable pour passer du visage au corps sans changer d'applicateur.", "price": 14500, "quantity": { "min": 1, "max": 2 } },
+            { "id": "duetto-hp-vasc", "reference": "QS-HP-V25", "name": "Pièce à main vasculaire 2–5 mm", "description": "Petits spots pour télangiectasies, angiomes et varicosités.", "price": 11800, "quantity": { "min": 1, "max": 2 } },
+            { "id": "duetto-hp-20", "reference": "QS-HP-20", "name": "Pièce à main 20 mm grandes zones", "description": "Couverture rapide du dos et des jambes.", "price": 12900 },
+            { "id": "duetto-hp-scan", "reference": "QS-SCAN-HYP", "name": "Scanner optique Hyper Scan", "description": "Balayage automatisé des grandes zones, réduit sensiblement la durée des séances.", "price": 23500 }
+          ]
+        },
+        {
+          "id": "duetto-acc",
+          "category": "accessory",
+          "title": "Accessoires & périphériques",
+          "selection": "multiple",
+          "options": [
+            { "id": "duetto-acc-safety", "reference": "QS-SAF-KIT", "name": "Kit sécurité laser patient", "description": "2 lunettes patient 755/1064 nm + signalétique de zone laser.", "price": 1450, "mandatory": true },
+            { "id": "duetto-acc-cool-int", "reference": "QS-COOL-INT", "name": "Refroidisseur cutané intégré", "description": "Refroidissement par contact intégré à la console.", "price": 15800 },
+            { "id": "duetto-acc-cryo6", "reference": "ZIM-CRYO6-K", "name": "Refroidisseur à air Zimmer Cryo 6", "description": "Air froid jusqu'à −30 °C, idéal en épilation grandes zones.", "price": 36500 },
+            { "id": "duetto-acc-cart", "reference": "QS-CART", "name": "Chariot de transport médical", "description": "Chariot stable pour déplacement entre cabines.", "price": 2400 },
+            { "id": "duetto-acc-fiber", "reference": "QS-FIB-SPR", "name": "Fibre optique de rechange", "description": "Fibre de remplacement pour continuité de service.", "price": 4900, "quantity": { "min": 1, "max": 3 } }
+          ]
+        },
+        {
+          "id": "duetto-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "duetto-svc-install", "reference": "BP-SRV-INST", "name": "Installation & mise en service", "description": "Livraison, calibration et formation initiale sur site.", "price": 0, "mandatory": true },
+            { "id": "duetto-svc-training", "reference": "BP-SRV-TRN2", "name": "Formation clinique avancée (2 jours)", "description": "Accompagnement sur patients par un expert clinique.", "price": 3800 },
+            { "id": "duetto-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces, main d'œuvre et déplacements inclus.", "price": 18500, "warrantyExtensionMonths": 24 },
+            { "id": "duetto-svc-maint", "reference": "BP-SRV-MP1", "name": "Maintenance préventive (1 an)", "description": "2 visites préventives et contrôle de puissance.", "price": 7200 },
+            { "id": "duetto-svc-marketing", "reference": "BP-SRV-MKT", "name": "Pack marketing cabinet", "description": "Supports patients, visuels réseaux sociaux et vitrine.", "price": 1900 }
+          ]
+        }
+      ],
+      "rules": [
+        { "type": "includes", "source": "duetto-cfg-full", "targets": ["duetto-lic-hpm", "duetto-lic-proto"] },
+        { "type": "requires", "source": "duetto-lic-proto", "targets": ["duetto-cfg-vp", "duetto-cfg-full"] },
+        { "type": "requires", "source": "duetto-hp-vasc", "targets": ["duetto-cfg-vp", "duetto-cfg-full"] },
+        { "type": "excludes", "source": "duetto-acc-cool-int", "targets": ["duetto-acc-cryo6"] }
+      ]
+    },
+    {
+      "id": "quanta-thunder-mt",
+      "brandId": "quanta",
+      "name": "Thunder MT",
+      "reference": "QS-THD-MT",
+      "family": "Laser double longueur d'onde haute vitesse",
+      "illustration": "laserTower",
+      "shortDescription": "Laser Alexandrite + Nd:YAG haute cadence conçu pour les centres à fort volume d'épilation.",
+      "description": "Le Thunder MT combine deux sources laser à haute cadence de tir pour réduire la durée des séances sur les grandes zones, avec un niveau de confort élevé pour le patient.",
+      "indications": ["epilation", "vasculaire"],
+      "technologies": ["Alexandrite 755 nm", "Nd:YAG 1064 nm", "Haute cadence", "Mixed Technology"],
+      "specs": [
+        { "label": "Longueurs d'onde", "value": "755 nm / 1064 nm" },
+        { "label": "Diamètre de spot", "value": "8 à 20 mm" },
+        { "label": "Cadence", "value": "jusqu'à 20 Hz" },
+        { "label": "Interface", "value": "Écran tactile 12\"" },
+        { "label": "Alimentation", "value": "230 V monophasé" },
+        { "label": "Poids", "value": "≈ 135 kg" }
+      ],
+      "standardItems": [
+        "Console Thunder MT",
+        "Pièce à main 15 mm",
+        "Pédale de commande",
+        "2 lunettes de protection opérateur",
+        "Manuel d'utilisation & guide des protocoles"
+      ],
+      "basePrice": 312000,
+      "maxDiscountPct": 10,
+      "warrantyMonths": 12,
+      "leadTimeWeeks": 8,
+      "roiDefaults": { "sessionPrice": 200, "patientsPerDay": 8, "consumablePerSession": 8 },
+      "optionGroups": [
+        {
+          "id": "thunder-cfg",
+          "category": "configuration",
+          "title": "Configuration",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "thunder-cfg-std", "reference": "QS-THD-CFG-STD", "name": "Standard", "description": "Épilation tous phototypes, cadence standard.", "price": 0, "default": true },
+            { "id": "thunder-cfg-speed", "reference": "QS-THD-CFG-SPD", "name": "Speed+", "description": "Cadence maximale pour les grandes zones.", "price": 21000 },
+            { "id": "thunder-cfg-pro", "reference": "QS-THD-CFG-PRO", "name": "Clinic Pro", "description": "Speed+ et protocoles vasculaires, licence analytique incluse.", "price": 34000 }
+          ]
+        },
+        {
+          "id": "thunder-lic",
+          "category": "configuration",
+          "title": "Licences",
+          "selection": "multiple",
+          "options": [
+            { "id": "thunder-lic-analytics", "reference": "QS-THD-LIC-AN", "name": "Licence analytique cabinet", "description": "Statistiques d'utilisation, export des séances et suivi patient.", "price": 4500 }
+          ]
+        },
+        {
+          "id": "thunder-hp",
+          "category": "handpiece",
+          "title": "Pièces à main & scanner",
+          "selection": "multiple",
+          "options": [
+            { "id": "thunder-hp-820", "reference": "QS-HP-820", "name": "Pièce à main 8–20 mm", "description": "Zoom motorisé, couvre toutes les zones.", "price": 16800, "quantity": { "min": 1, "max": 2 } },
+            { "id": "thunder-hp-vasc", "reference": "QS-HP-V36", "name": "Pièce à main vasculaire 3–6 mm", "description": "Traitement des lésions vasculaires du visage et des jambes.", "price": 12400 },
+            { "id": "thunder-hp-scan", "reference": "QS-SCAN-THD", "name": "Scanner haute vitesse", "description": "Balayage automatisé synchronisé avec la cadence de tir.", "price": 26500 }
+          ]
+        },
+        {
+          "id": "thunder-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "thunder-acc-safety", "reference": "QS-SAF-KIT", "name": "Kit sécurité laser patient", "description": "2 lunettes patient + signalétique de zone laser.", "price": 1450, "mandatory": true },
+            { "id": "thunder-acc-cool-int", "reference": "QS-COOL-INT", "name": "Refroidisseur intégré", "description": "Refroidissement par contact intégré à la pièce à main.", "price": 16900 },
+            { "id": "thunder-acc-cryo7", "reference": "ZIM-CRYO7-K", "name": "Refroidisseur à air Zimmer Cryo 7", "description": "Air froid haute performance avec écran tactile.", "price": 49800 },
+            { "id": "thunder-acc-cart", "reference": "QS-CART", "name": "Chariot de transport médical", "description": "Déplacement sécurisé entre cabines.", "price": 2400 }
+          ]
+        },
+        {
+          "id": "thunder-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "thunder-svc-install", "reference": "BP-SRV-INST", "name": "Installation & mise en service", "description": "Livraison, calibration et formation initiale sur site.", "price": 0, "mandatory": true },
+            { "id": "thunder-svc-training", "reference": "BP-SRV-TRN2", "name": "Formation clinique avancée (2 jours)", "description": "Accompagnement sur patients par un expert clinique.", "price": 3800 },
+            { "id": "thunder-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces, main d'œuvre et déplacements inclus.", "price": 21500, "warrantyExtensionMonths": 24 },
+            { "id": "thunder-svc-maint", "reference": "BP-SRV-MP1", "name": "Maintenance préventive (1 an)", "description": "2 visites préventives et contrôle de puissance.", "price": 7900 }
+          ]
+        }
+      ],
+      "rules": [
+        { "type": "includes", "source": "thunder-cfg-pro", "targets": ["thunder-lic-analytics"] },
+        { "type": "requires", "source": "thunder-hp-vasc", "targets": ["thunder-cfg-pro"] },
+        { "type": "excludes", "source": "thunder-acc-cool-int", "targets": ["thunder-acc-cryo7"] }
+      ]
+    },
+    {
+      "id": "zimmer-cryo-6",
+      "brandId": "zimmer",
+      "name": "Cryo 6",
+      "reference": "ZIM-CRYO6",
+      "family": "Refroidissement cutané par air froid",
+      "illustration": "cryoUnit",
+      "shortDescription": "Refroidissement par air froid jusqu'à −30 °C pour le confort patient pendant les traitements laser et esthétiques.",
+      "description": "Le Cryo 6 souffle un air froid continu qui anesthésie localement la peau et la protège des effets thermiques. Il s'associe à toutes les plateformes laser et IPL du cabinet.",
+      "indications": ["refroidissement"],
+      "technologies": ["Air froid −30 °C", "9 niveaux de débit", "Mode thérapie"],
+      "specs": [
+        { "label": "Température de l'air", "value": "jusqu'à −30 °C" },
+        { "label": "Niveaux de débit", "value": "9 niveaux" },
+        { "label": "Tuyau de traitement", "value": "1,8 m" },
+        { "label": "Alimentation", "value": "230 V" },
+        { "label": "Poids", "value": "≈ 58 kg" }
+      ],
+      "standardItems": [
+        "Unité Cryo 6",
+        "Tuyau de traitement standard",
+        "Embout standard",
+        "Filtre à air"
+      ],
+      "basePrice": 39500,
+      "maxDiscountPct": 8,
+      "warrantyMonths": 24,
+      "leadTimeWeeks": 3,
+      "roiDefaults": { "sessionPrice": 30, "patientsPerDay": 8, "consumablePerSession": 0 },
+      "optionGroups": [
+        {
+          "id": "cryo6-cfg",
+          "category": "configuration",
+          "title": "Version",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "cryo6-cfg-aes", "reference": "ZIM-C6-AES", "name": "Esthétique (couplage laser)", "description": "Programmes dédiés au refroidissement pendant les tirs laser.", "price": 0, "default": true },
+            { "id": "cryo6-cfg-ther", "reference": "ZIM-C6-THR", "name": "Esthétique + Thérapie", "description": "Ajoute les programmes de cryothérapie antalgique.", "price": 4200 }
+          ]
+        },
+        {
+          "id": "cryo6-hp",
+          "category": "handpiece",
+          "title": "Bras & embouts",
+          "selection": "multiple",
+          "options": [
+            { "id": "cryo6-hp-arm", "reference": "ZIM-ARM", "name": "Bras articulé de fixation", "description": "Maintient le tuyau en position : mains libres pour le praticien.", "price": 2900 },
+            { "id": "cryo6-hp-tips", "reference": "ZIM-TIPS3", "name": "Kit embouts (petit, large, allongé)", "description": "Adapte le flux d'air à la zone traitée.", "price": 690, "quantity": { "min": 1, "max": 3 } },
+            { "id": "cryo6-hp-adapter", "reference": "ZIM-LAS-ADP", "name": "Adaptateur pour pièce à main laser", "description": "Fixe le flux d'air directement sur l'applicateur laser.", "price": 450, "quantity": { "min": 1, "max": 4 } }
+          ]
+        },
+        {
+          "id": "cryo6-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "cryo6-acc-wall", "reference": "ZIM-WALL", "name": "Support mural", "description": "Libère l'espace au sol en cabine.", "price": 850 },
+            { "id": "cryo6-acc-filters", "reference": "ZIM-FLT2", "name": "Filtres à air de rechange (x2)", "description": "À remplacer tous les 6 mois environ.", "price": 180, "quantity": { "min": 1, "max": 6 } }
+          ]
+        },
+        {
+          "id": "cryo6-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "cryo6-svc-install", "reference": "BP-SRV-INST", "name": "Livraison & mise en service", "description": "Installation et prise en main sur site.", "price": 0, "mandatory": true },
+            { "id": "cryo6-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces et main d'œuvre.", "price": 4200, "warrantyExtensionMonths": 24 }
+          ]
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "zimmer-cryo-7",
+      "brandId": "zimmer",
+      "name": "Cryo 7",
+      "reference": "ZIM-CRYO7",
+      "family": "Refroidissement par air froid nouvelle génération",
+      "illustration": "cryoUnit",
+      "shortDescription": "Air froid haute performance, écran tactile et programmes mémorisés pour les cabinets multi-technologies.",
+      "description": "Le Cryo 7 offre un débit d'air renforcé, une interface tactile et des programmes enregistrables par praticien. Idéal en accompagnement des lasers d'épilation et vasculaires.",
+      "indications": ["refroidissement"],
+      "technologies": ["Air froid −30 °C", "Écran tactile", "Mode intervalle", "Programmes mémorisés"],
+      "specs": [
+        { "label": "Température de l'air", "value": "jusqu'à −30 °C" },
+        { "label": "Débit", "value": "renforcé, réglable" },
+        { "label": "Interface", "value": "Écran tactile couleur" },
+        { "label": "Tuyau de traitement", "value": "1,8 m" },
+        { "label": "Alimentation", "value": "230 V" }
+      ],
+      "standardItems": [
+        "Unité Cryo 7",
+        "Tuyau de traitement standard",
+        "Embout standard",
+        "Filtre à air"
+      ],
+      "basePrice": 52800,
+      "maxDiscountPct": 8,
+      "warrantyMonths": 24,
+      "leadTimeWeeks": 3,
+      "roiDefaults": { "sessionPrice": 30, "patientsPerDay": 10, "consumablePerSession": 0 },
+      "optionGroups": [
+        {
+          "id": "cryo7-cfg",
+          "category": "configuration",
+          "title": "Version",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "cryo7-cfg-aes", "reference": "ZIM-C7-AES", "name": "Esthétique", "description": "Programmes de refroidissement pour laser et IPL.", "price": 0, "default": true },
+            { "id": "cryo7-cfg-physio", "reference": "ZIM-C7-PHY", "name": "Esthétique + Physio", "description": "Ajoute les programmes de cryothérapie et de récupération.", "price": 5600 }
+          ]
+        },
+        {
+          "id": "cryo7-hp",
+          "category": "handpiece",
+          "title": "Bras & embouts",
+          "selection": "multiple",
+          "options": [
+            { "id": "cryo7-hp-arm", "reference": "ZIM-ARM", "name": "Bras articulé de fixation", "description": "Maintient le tuyau en position : mains libres pour le praticien.", "price": 2900 },
+            { "id": "cryo7-hp-tips", "reference": "ZIM-TIPS3", "name": "Kit embouts (petit, large, allongé)", "description": "Adapte le flux d'air à la zone traitée.", "price": 690, "quantity": { "min": 1, "max": 3 } },
+            { "id": "cryo7-hp-adapter", "reference": "ZIM-LAS-ADP", "name": "Adaptateur pour pièce à main laser", "description": "Fixe le flux d'air directement sur l'applicateur laser.", "price": 450, "quantity": { "min": 1, "max": 4 } }
+          ]
+        },
+        {
+          "id": "cryo7-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "cryo7-acc-filters", "reference": "ZIM-FLT2", "name": "Filtres à air de rechange (x2)", "description": "À remplacer tous les 6 mois environ.", "price": 180, "quantity": { "min": 1, "max": 6 } },
+            { "id": "cryo7-acc-hose", "reference": "ZIM-HOSE-L", "name": "Tuyau long 2,5 m", "description": "Plus d'amplitude autour de la table de soin.", "price": 1250 }
+          ]
+        },
+        {
+          "id": "cryo7-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "cryo7-svc-install", "reference": "BP-SRV-INST", "name": "Livraison & mise en service", "description": "Installation et prise en main sur site.", "price": 0, "mandatory": true },
+            { "id": "cryo7-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces et main d'œuvre.", "price": 5400, "warrantyExtensionMonths": 24 }
+          ]
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dermalux-triwave-md",
+      "brandId": "dermalux",
+      "name": "Tri-Wave MD",
+      "reference": "DLX-TW-MD",
+      "family": "Photothérapie LED médicale",
+      "illustration": "ledPanel",
+      "shortDescription": "Trois longueurs d'onde (bleu, rouge, proche infrarouge) pour le rajeunissement, l'acné et la récupération post-acte.",
+      "description": "Le Tri-Wave MD délivre simultanément ou séparément 415 nm, 633 nm et 830 nm via trois panneaux articulés. Séances sans douleur, sans éviction sociale, complément idéal des actes laser et injectables.",
+      "indications": ["phototherapie", "rajeunissement"],
+      "technologies": ["415 nm bleu", "633 nm rouge", "830 nm proche IR", "Panneaux articulés"],
+      "specs": [
+        { "label": "Longueurs d'onde", "value": "415 / 633 / 830 nm" },
+        { "label": "Nombre de LED", "value": "1 000+ LED médicales" },
+        { "label": "Durée de séance", "value": "≈ 20 min" },
+        { "label": "Panneaux", "value": "3 panneaux articulés" },
+        { "label": "Alimentation", "value": "230 V" }
+      ],
+      "standardItems": [
+        "Tête Tri-Wave MD 3 panneaux",
+        "Bras articulé",
+        "Lunettes de protection patient (x2)",
+        "Guide des protocoles"
+      ],
+      "basePrice": 74500,
+      "maxDiscountPct": 10,
+      "warrantyMonths": 24,
+      "leadTimeWeeks": 4,
+      "roiDefaults": { "sessionPrice": 90, "patientsPerDay": 6, "consumablePerSession": 2 },
+      "optionGroups": [
+        {
+          "id": "triwave-cfg",
+          "category": "configuration",
+          "title": "Protocoles",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "triwave-cfg-aes", "reference": "DLX-PRT-AES", "name": "Protocole Esthétique", "description": "Rajeunissement, éclat, préparation de peau.", "price": 0, "default": true },
+            { "id": "triwave-cfg-med", "reference": "DLX-PRT-MED", "name": "Protocole Médical", "description": "Acné, rosacée, cicatrisation post-procédure.", "price": 6900 },
+            { "id": "triwave-cfg-both", "reference": "DLX-PRT-ALL", "name": "Esthétique + Médical", "description": "L'ensemble des protocoles Dermalux.", "price": 9800 }
+          ]
+        },
+        {
+          "id": "triwave-lic",
+          "category": "configuration",
+          "title": "Programmes complémentaires",
+          "selection": "multiple",
+          "options": [
+            { "id": "triwave-lic-post", "reference": "DLX-PRG-POST", "name": "Programme post-laser & peeling", "description": "Réduit les suites (rougeurs, œdème) après actes ablatifs.", "price": 2400 }
+          ]
+        },
+        {
+          "id": "triwave-acc",
+          "category": "accessory",
+          "title": "Support & accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "triwave-acc-stand", "reference": "DLX-STAND", "name": "Support mobile sur roulettes", "description": "Déplacement facile entre cabines, freins de sécurité.", "price": 3900, "default": true },
+            { "id": "triwave-acc-wall", "reference": "DLX-WALL", "name": "Fixation murale articulée", "description": "Gain de place pour cabine dédiée.", "price": 3200 },
+            { "id": "triwave-acc-goggles", "reference": "DLX-GOG10", "name": "Lunettes patient LED (lot de 10)", "description": "Lunettes opaques à usage multiple.", "price": 380, "quantity": { "min": 1, "max": 5 } },
+            { "id": "triwave-acc-marketing", "reference": "DLX-MKT", "name": "Kit marketing cabinet", "description": "Kakémono, brochures patients et visuels digitaux.", "price": 1200 }
+          ]
+        },
+        {
+          "id": "triwave-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "triwave-svc-install", "reference": "BP-SRV-INST", "name": "Installation & formation", "description": "Mise en service et formation de l'équipe sur site.", "price": 0, "mandatory": true },
+            { "id": "triwave-svc-combo", "reference": "BP-SRV-TRNC", "name": "Formation protocoles combinés (½ journée)", "description": "LED associée au laser, au peeling et aux injectables.", "price": 950 },
+            { "id": "triwave-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces et main d'œuvre.", "price": 6500, "warrantyExtensionMonths": 24 }
+          ]
+        }
+      ],
+      "rules": [
+        { "type": "requires", "source": "triwave-lic-post", "targets": ["triwave-cfg-med", "triwave-cfg-both"] },
+        { "type": "excludes", "source": "triwave-acc-stand", "targets": ["triwave-acc-wall"] }
+      ]
+    },
+    {
+      "id": "dermalux-flex-md",
+      "brandId": "dermalux",
+      "name": "Flex MD",
+      "reference": "DLX-FLX-MD",
+      "family": "Photothérapie LED flexible & portable",
+      "illustration": "ledPanel",
+      "shortDescription": "Panneau LED flexible tri-longueur d'onde, idéal pour les cabinets compacts et les traitements corps.",
+      "description": "Le Flex MD épouse les zones du visage et du corps grâce à son panneau souple. Il reprend les longueurs d'onde Dermalux dans un format léger et transportable.",
+      "indications": ["phototherapie", "rajeunissement"],
+      "technologies": ["415 / 633 / 830 nm", "Panneau flexible", "Portable"],
+      "specs": [
+        { "label": "Longueurs d'onde", "value": "415 / 633 / 830 nm" },
+        { "label": "Format", "value": "Panneau souple" },
+        { "label": "Durée de séance", "value": "≈ 20 min" },
+        { "label": "Alimentation", "value": "230 V" }
+      ],
+      "standardItems": [
+        "Panneau Flex MD",
+        "Bloc d'alimentation",
+        "Lunettes de protection patient (x2)"
+      ],
+      "basePrice": 31500,
+      "maxDiscountPct": 10,
+      "warrantyMonths": 24,
+      "leadTimeWeeks": 3,
+      "roiDefaults": { "sessionPrice": 70, "patientsPerDay": 4, "consumablePerSession": 2 },
+      "optionGroups": [
+        {
+          "id": "flex-cfg",
+          "category": "configuration",
+          "title": "Protocoles",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "flex-cfg-aes", "reference": "DLX-FLX-AES", "name": "Esthétique", "description": "Rajeunissement et éclat.", "price": 0, "default": true },
+            { "id": "flex-cfg-med", "reference": "DLX-FLX-MED", "name": "Médical", "description": "Acné, cicatrisation, post-procédure.", "price": 3900 }
+          ]
+        },
+        {
+          "id": "flex-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "flex-acc-tripod", "reference": "DLX-FLX-TRI", "name": "Trépied mobile", "description": "Positionnement mains libres au-dessus du patient.", "price": 1100 },
+            { "id": "flex-acc-bag", "reference": "DLX-FLX-BAG", "name": "Sacoche de transport", "description": "Protection pour usage multi-sites.", "price": 450 },
+            { "id": "flex-acc-goggles", "reference": "DLX-GOG10", "name": "Lunettes patient LED (lot de 10)", "description": "Lunettes opaques à usage multiple.", "price": 380, "quantity": { "min": 1, "max": 5 } }
+          ]
+        },
+        {
+          "id": "flex-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "flex-svc-install", "reference": "BP-SRV-INST", "name": "Mise en service & formation", "description": "Prise en main sur site.", "price": 0, "mandatory": true },
+            { "id": "flex-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces et main d'œuvre.", "price": 2900, "warrantyExtensionMonths": 24 }
+          ]
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "intermedic-silklase",
+      "brandId": "intermedic",
+      "name": "Silklase CO₂",
+      "reference": "IM-SLK-CO2",
+      "family": "Laser CO₂ fractionné 10 600 nm",
+      "illustration": "co2Arm",
+      "shortDescription": "Laser CO₂ fractionné pour le resurfaçage, les cicatrices et le rajeunissement, du superficiel au profond.",
+      "description": "Le Silklase associe un scanner fractionné à des modes superficiels et profonds pour traiter rides, cicatrices d'acné, relâchement et lésions bénignes. Module intime disponible en option.",
+      "indications": ["rajeunissement"],
+      "technologies": ["CO₂ 10 600 nm", "Scanner fractionné", "Mode superficiel & profond", "Bras articulé"],
+      "specs": [
+        { "label": "Longueur d'onde", "value": "10 600 nm" },
+        { "label": "Délivrance", "value": "Bras articulé 7 articulations" },
+        { "label": "Modes", "value": "Continu, pulsé, fractionné" },
+        { "label": "Interface", "value": "Écran tactile" },
+        { "label": "Alimentation", "value": "230 V" }
+      ],
+      "standardItems": [
+        "Console Silklase CO₂",
+        "Bras articulé",
+        "Scanner fractionné standard",
+        "Pédale de commande",
+        "Lunettes opérateur CO₂ (x1)"
+      ],
+      "basePrice": 158000,
+      "maxDiscountPct": 12,
+      "warrantyMonths": 12,
+      "leadTimeWeeks": 6,
+      "roiDefaults": { "sessionPrice": 350, "patientsPerDay": 3, "consumablePerSession": 15 },
+      "optionGroups": [
+        {
+          "id": "silk-cfg",
+          "category": "configuration",
+          "title": "Configuration",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "silk-cfg-derm", "reference": "IM-SLK-DERM", "name": "Dermatologie", "description": "Resurfaçage, cicatrices, lésions bénignes.", "price": 0, "default": true },
+            { "id": "silk-cfg-gyn", "reference": "IM-SLK-GYN", "name": "Dermatologie + Intime", "description": "Ajoute les protocoles de rajeunissement intime.", "price": 24000 }
+          ]
+        },
+        {
+          "id": "silk-hp",
+          "category": "handpiece",
+          "title": "Pièces à main & scanners",
+          "selection": "multiple",
+          "options": [
+            { "id": "silk-hp-focus", "reference": "IM-HP-F50", "name": "Pièce à main focalisée 50 mm", "description": "Ablation précise des lésions bénignes.", "price": 6800 },
+            { "id": "silk-hp-micro", "reference": "IM-SCN-HD", "name": "Scanner micro-fractionné haute densité", "description": "Resurfaçage fin pour peaux sensibles et paupières.", "price": 17500 },
+            { "id": "silk-hp-vaginal", "reference": "IM-HP-V360", "name": "Sonde intime 360°", "description": "Applicateur dédié aux protocoles intimes.", "price": 9800 }
+          ]
+        },
+        {
+          "id": "silk-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "silk-acc-glasses", "reference": "IM-GOG-CO2", "name": "Lunettes de protection CO₂ (x2)", "description": "Obligatoires pour le patient et l'assistant.", "price": 620, "mandatory": true },
+            { "id": "silk-acc-smoke", "reference": "IM-SMK-EVC", "name": "Évacuateur de fumées", "description": "Aspiration et filtration des fumées de vaporisation.", "price": 5400 },
+            { "id": "silk-acc-cryo6", "reference": "ZIM-CRYO6-K", "name": "Refroidisseur à air Zimmer Cryo 6", "description": "Améliore le confort patient pendant le resurfaçage.", "price": 36500 }
+          ]
+        },
+        {
+          "id": "silk-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "silk-svc-install", "reference": "BP-SRV-INST", "name": "Installation & mise en service", "description": "Alignement du bras et formation initiale.", "price": 0, "mandatory": true },
+            { "id": "silk-svc-training", "reference": "BP-SRV-TRN2", "name": "Formation clinique avancée (2 jours)", "description": "Protocoles de resurfaçage et gestion des suites.", "price": 3200 },
+            { "id": "silk-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces, main d'œuvre et déplacements inclus.", "price": 11500, "warrantyExtensionMonths": 24 }
+          ]
+        }
+      ],
+      "rules": [
+        { "type": "requires", "source": "silk-hp-vaginal", "targets": ["silk-cfg-gyn"] }
+      ]
+    },
+    {
+      "id": "intermedic-lipodefine",
+      "brandId": "intermedic",
+      "name": "LipoDefine 1470",
+      "reference": "IM-LPD-1470",
+      "family": "Laser diode 1470 nm — remodelage & lipolyse",
+      "illustration": "compactConsole",
+      "shortDescription": "Laser diode 1470 nm pour la lipolyse assistée, le remodelage et le raffermissement du visage et du corps.",
+      "description": "Le LipoDefine délivre l'énergie 1470 nm par fibre radiale pour un remodelage mini-invasif avec contrôle thermique. Module visage disponible pour l'ovale et le double menton.",
+      "indications": ["rajeunissement"],
+      "technologies": ["Diode 1470 nm", "Fibre radiale", "Contrôle thermique"],
+      "specs": [
+        { "label": "Longueur d'onde", "value": "1470 nm" },
+        { "label": "Délivrance", "value": "Fibre radiale stérile" },
+        { "label": "Interface", "value": "Écran tactile" },
+        { "label": "Alimentation", "value": "230 V" }
+      ],
+      "standardItems": [
+        "Console LipoDefine 1470",
+        "Pièce à main fibre",
+        "Pédale de commande",
+        "Lunettes opérateur 1470 nm"
+      ],
+      "basePrice": 96000,
+      "maxDiscountPct": 10,
+      "warrantyMonths": 12,
+      "leadTimeWeeks": 5,
+      "roiDefaults": { "sessionPrice": 900, "patientsPerDay": 1, "consumablePerSession": 120 },
+      "optionGroups": [
+        {
+          "id": "lpd-cfg",
+          "category": "configuration",
+          "title": "Configuration",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "lpd-cfg-body", "reference": "IM-LPD-BODY", "name": "Corps", "description": "Protocoles abdomen, cuisses, bras.", "price": 0, "default": true },
+            { "id": "lpd-cfg-face", "reference": "IM-LPD-FACE", "name": "Corps + Visage", "description": "Ajoute les protocoles ovale du visage et double menton.", "price": 14800 }
+          ]
+        },
+        {
+          "id": "lpd-hp",
+          "category": "handpiece",
+          "title": "Fibres & applicateurs",
+          "selection": "multiple",
+          "options": [
+            { "id": "lpd-hp-fibers", "reference": "IM-FIB-R5", "name": "Fibres radiales stériles (boîte de 5)", "description": "Consommable à usage unique.", "price": 2350, "default": true, "quantity": { "min": 1, "max": 10 } },
+            { "id": "lpd-hp-ergo", "reference": "IM-HP-ERG", "name": "Pièce à main ergonomique", "description": "Prise en main améliorée pour les longues procédures.", "price": 3900 },
+            { "id": "lpd-hp-thermal", "reference": "IM-THM-CAM", "name": "Caméra thermique de contrôle", "description": "Visualisation de la température cutanée en temps réel.", "price": 8900 }
+          ]
+        },
+        {
+          "id": "lpd-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "lpd-acc-glasses", "reference": "IM-GOG-1470", "name": "Lunettes patient 1470 nm", "description": "Protection patient obligatoire.", "price": 480, "mandatory": true },
+            { "id": "lpd-acc-cart", "reference": "IM-CART", "name": "Chariot dédié", "description": "Rangement fibres et accessoires.", "price": 1700 }
+          ]
+        },
+        {
+          "id": "lpd-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "lpd-svc-install", "reference": "BP-SRV-INST", "name": "Installation & mise en service", "description": "Formation initiale sur site.", "price": 0, "mandatory": true },
+            { "id": "lpd-svc-proctor", "reference": "BP-SRV-PRC", "name": "Accompagnement premiers cas (2 sessions)", "description": "Expert présent lors des premières procédures.", "price": 4600 },
+            { "id": "lpd-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces et main d'œuvre.", "price": 7200, "warrantyExtensionMonths": 24 }
+          ]
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "asirox-initia",
+      "brandId": "asirox",
+      "name": "Initia Diode",
+      "reference": "AX-INITIA",
+      "family": "Laser diode d'épilation",
+      "illustration": "compactConsole",
+      "shortDescription": "Laser diode d'épilation compact, refroidissement par saphir et mode glissé pour des séances rapides et confortables.",
+      "description": "L'Initia est une plateforme diode d'épilation conçue pour la simplicité d'utilisation : interface guidée, refroidissement par contact saphir et mode glissé sur les grandes zones.",
+      "indications": ["epilation"],
+      "technologies": ["Diode 808 nm", "Saphir refroidi", "Mode glissé", "Interface guidée"],
+      "specs": [
+        { "label": "Longueur d'onde", "value": "808 nm" },
+        { "label": "Refroidissement", "value": "Contact saphir" },
+        { "label": "Modes", "value": "Statique & glissé" },
+        { "label": "Interface", "value": "Écran tactile" },
+        { "label": "Alimentation", "value": "230 V" }
+      ],
+      "standardItems": [
+        "Console Initia",
+        "Pièce à main diode 800 W",
+        "Lunettes opérateur",
+        "Guide des protocoles"
+      ],
+      "basePrice": 89000,
+      "maxDiscountPct": 10,
+      "warrantyMonths": 12,
+      "leadTimeWeeks": 4,
+      "roiDefaults": { "sessionPrice": 120, "patientsPerDay": 6, "consumablePerSession": 3 },
+      "optionGroups": [
+        {
+          "id": "initia-cfg",
+          "category": "configuration",
+          "title": "Puissance de la pièce à main",
+          "selection": "single",
+          "required": true,
+          "options": [
+            { "id": "initia-cfg-800", "reference": "AX-INI-800", "name": "Pièce à main 800 W", "description": "Polyvalente, adaptée à la majorité des zones.", "price": 0, "default": true },
+            { "id": "initia-cfg-1600", "reference": "AX-INI-1600", "name": "Pièce à main 1600 W", "description": "Haute puissance pour séances plus rapides.", "price": 12500 }
+          ]
+        },
+        {
+          "id": "initia-hp",
+          "category": "handpiece",
+          "title": "Applicateurs",
+          "selection": "multiple",
+          "options": [
+            { "id": "initia-hp-small", "reference": "AX-INI-SPT", "name": "Embout petit spot", "description": "Zones fines : lèvre supérieure, aisselles.", "price": 3400 },
+            { "id": "initia-hp-second", "reference": "AX-INI-HP2", "name": "Seconde pièce à main", "description": "Continuité de service et usage multi-cabines.", "price": 21000 }
+          ]
+        },
+        {
+          "id": "initia-acc",
+          "category": "accessory",
+          "title": "Accessoires",
+          "selection": "multiple",
+          "options": [
+            { "id": "initia-acc-glasses", "reference": "AX-GOG", "name": "Lunettes patient", "description": "Protection patient obligatoire.", "price": 390, "mandatory": true },
+            { "id": "initia-acc-water", "reference": "AX-H2O-KIT", "name": "Kit refroidissement eau renforcé", "description": "Recommandé pour la pièce à main 1600 W.", "price": 2600 },
+            { "id": "initia-acc-cart", "reference": "AX-CART", "name": "Chariot", "description": "Mobilité entre cabines.", "price": 1500 }
+          ]
+        },
+        {
+          "id": "initia-svc",
+          "category": "service",
+          "title": "Services & garanties",
+          "selection": "multiple",
+          "options": [
+            { "id": "initia-svc-install", "reference": "BP-SRV-INST", "name": "Installation & formation", "description": "Mise en service et formation de l'équipe.", "price": 0, "mandatory": true },
+            { "id": "initia-svc-warranty", "reference": "BP-SRV-W24", "name": "Extension de garantie +2 ans", "description": "Pièces et main d'œuvre.", "price": 7800, "warrantyExtensionMonths": 24 },
+            { "id": "initia-svc-maint", "reference": "BP-SRV-MP1", "name": "Maintenance préventive (1 an)", "description": "Contrôle annuel et remplacement des filtres.", "price": 3600 }
+          ]
+        }
+      ],
+      "rules": [
+        { "type": "requires", "source": "initia-cfg-1600", "targets": ["initia-acc-water"] }
+      ]
+    }
+  ]
+}

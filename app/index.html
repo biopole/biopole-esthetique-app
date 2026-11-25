@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Remplacé par la valeur de `--base-href` au moment de `flutter build web`. -->
+  <base href="/biopole-esthetique-app/app/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biopole Esthétique — configurateur d'équipements et devis PDF pour l'équipe commerciale BIOPOLE.">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <!-- Installation sur l'écran d'accueil (iPhone / iPad) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Biopole Esthétique">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <title>Biopole Esthétique</title>
+  <!-- Manifeste commun au site et à l'app (publié à la racine du site). -->
+  <link rel="manifest" href="../manifest.webmanifest">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #FFFFFF; }
+    #boot {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 28px;
+      background: #FFFFFF; transition: opacity .35s ease; z-index: 10;
+    }
+    #boot img { width: min(46vw, 190px); height: auto; }
+    #boot .bar { width: 120px; height: 3px; border-radius: 3px; background: #F7EAEA; overflow: hidden; }
+    #boot .bar::after {
+      content: ""; display: block; width: 40%; height: 100%; border-radius: 3px; background: #BB2323;
+      animation: boot 1.1s ease-in-out infinite;
+    }
+    @keyframes boot { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+    #boot.done { opacity: 0; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div id="boot" aria-label="Chargement de Biopole Esthétique">
+    <img src="icons/lockup.png" alt="Biopole Esthétique">
+    <div class="bar"></div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var boot = document.getElementById('boot');
+      boot.classList.add('done');
+      setTimeout(function () { boot.remove(); }, 400);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

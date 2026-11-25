@@ -1,0 +1,38 @@
+{
+  "name": "BIOPOLE",
+  "division": "Division Esthétique",
+  "tagline": "Équipements médicaux & lasers esthétiques",
+  "address": "45, rue du Japon, Montplaisir",
+  "city": "Tunis, Tunisie",
+  "phone": "+216 22 301 255",
+  "email": "biopole@biopole.com.tn",
+  "website": "www.biopole-tunisie.com",
+  "taxId": "",
+  "quotePrefix": "BP-EST",
+  "conditions": [
+    {
+      "title": "Garantie",
+      "text": "{warrantyMonths} mois pièces et main d'œuvre à compter de la date d'installation, hors consommables et pièces d'usure."
+    },
+    {
+      "title": "Livraison",
+      "text": "Délai indicatif de {leadTimeWeeks} semaines à compter de la réception du bon de commande signé et de l'acompte éventuel."
+    },
+    {
+      "title": "Installation & formation",
+      "text": "Installation, calibration et formation initiale de l'équipe médicale assurées sur site par un ingénieur d'application BIOPOLE."
+    },
+    {
+      "title": "Validité de l'offre",
+      "text": "Offre valable {validityDays} jours, soit jusqu'au {validUntil}. Au-delà, les prix et disponibilités pourront être révisés."
+    },
+    {
+      "title": "Prix",
+      "text": "Prix exprimés en {currency}. Toute modification de configuration fera l'objet d'un nouveau devis."
+    },
+    {
+      "title": "Conformité",
+      "text": "Équipement marqué CE médical. Documentation technique, certificats et manuels remis à la livraison."
+    }
+  ]
+}
